@@ -26,16 +26,16 @@
       padding-top: 10px;
   }
   
-  .container__inputText {
+  .container__input {
       display: flex;
       flex-basis: 70%;
       flex-shrink: 1;
       flex-grow: 1;
       min-width: 60px;
-      margin: auto 10px 10px 10px;
+      margin: 0px 10px 10px 10px;
   }
   
-  .container__addTaskButton {
+  .container__button {
       display: flex;
       flex-basis: auto;
       flex-grow: 1;
@@ -46,4 +46,20 @@
       border-style: none;
       padding: 5px;
       margin: auto 10px 10px 10px
+  }
+  
+  .container--listHeader {
+      background-color: white;
+      font-family: 'Francois One', sans-serif;
+      padding: 10px;
+      font-size: 20px;
+      margin-top: 10px;
+  }
+  
+  .container__list {
+      background-color: white;
+  }
+  
+  .textDone {
+      text-decoration: line-through;
   }
