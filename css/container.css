@@ -1,0 +1,49 @@
+  .container {
+      margin: 0 auto;
+      min-width: auto;
+      max-width: 600px;
+      background-color: rgb(236, 236, 236);
+      margin-top: 2px;
+  }
+  
+  .container__header {
+      font-family: 'Francois One', sans-serif;
+      font-weight: normal;
+  }
+  
+  .container--newTaskText {
+      background-color: white;
+      font-family: 'Francois One', sans-serif;
+      padding: 10px;
+      font-size: 20px;
+  }
+  
+  .container--addTask {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: white;
+      padding-top: 10px;
+  }
+  
+  .container__inputText {
+      display: flex;
+      flex-basis: 70%;
+      flex-shrink: 1;
+      flex-grow: 1;
+      min-width: 60px;
+      margin: auto 10px 10px 10px;
+  }
+  
+  .container__addTaskButton {
+      display: flex;
+      flex-basis: auto;
+      flex-grow: 1;
+      justify-content: center;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      background-color: teal;
+      border-style: none;
+      padding: 5px;
+      margin: auto 10px 10px 10px
+  }
