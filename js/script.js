@@ -19,18 +19,36 @@
             <button class="js-remove">Usuń</button>
         </li>
         `
-        };
+        }
         document.querySelector(".js-listTask").innerHTML = htmlString;
+        const deleteButtons = document.querySelectorAll(".js-remove");
+
+        deleteButtons.forEach((deleteButton, index) => {
+            deleteButton.addEventListener("click", () => {
+                tasks.splice(index, 1);
+                render();
+            });
+
+        })
+        console.log(deleteButtons);
     };
     const init = () => {
         const formTask = document.querySelector(".js-formTask");
         formTask.addEventListener("submit", (event) => {
             event.preventDefault();
             const newTask = document.querySelector(".js-newTask").value.trim();
+            if (newTask === "") {
+                return;
+            }
             console.log(newTask);
+            tasks.push({
+                content: newTask,
+            })
+            render();
         });
 
     };
-    render();
+
     init();
+    render();
 }
