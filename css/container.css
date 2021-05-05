@@ -60,6 +60,10 @@
       background-color: white;
   }
   
-  .textDone {
+  .list__item {
+      text-decoration: none;
+  }
+  
+  .list__item--done {
       text-decoration: line-through;
   }
