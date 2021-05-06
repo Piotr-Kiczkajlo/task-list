@@ -57,13 +57,46 @@
   }
   
   .container__list {
+      display: flex;
+      flex-direction: column;
       background-color: white;
+      list-style-type: none;
+      padding: 10px;
   }
   
   .list__item {
-      text-decoration: none;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2px;
+  }
+  
+  .list__item--content {
+      justify-items: flex-start;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      margin-left: 15px;
   }
   
   .list__item--done {
       text-decoration: line-through;
+  }
+  
+  .checkedButton {
+      width: 20px;
+      background-color: green;
+      border: none;
+  }
+  
+  .checkedButton:hover {
+      background-color: rgb(52, 167, 17);
+  }
+  
+  .deleteButton {
+      width: 20px;
+      background-color: red;
+      border: none;
+  }
+  
+  .deleteButton:hover {
+      background-color: rgb(255, 98, 98);
   }
