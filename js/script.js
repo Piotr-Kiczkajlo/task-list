@@ -1,22 +1,17 @@
 {
-    const tasks = [{
-            content: "zaprowadzić Kacpra",
-            done: false
-        },
-        {
-            content: "zrobić zakupy",
-            done: true
-        },
-    ];
-    const deleteTask = () => {
-        const deleteButtons = document.querySelectorAll(".js-delete");
-        deleteButtons.forEach((deleteButton, index) => {
-            deleteButton.addEventListener("click", () => {
-                tasks.splice(index, 1);
-                render();
-            });
+    const tasks = [];
+    const newTaskAdd = () => {
+        const newTask = document.querySelector(".js-newTask");
+        const newTaskText = newTask.value.trim();
+        if (newTaskText === "") {
+            return;
+        }
+        tasks.push({
+            content: newTaskText,
         });
-    }
+        console.log(newTaskText);
+        newTask.value = "";
+    };
     const toggleChecked = () => {
         const checkButtons = document.querySelectorAll(".js-done");
         checkButtons.forEach((checkButton, index) => {
@@ -25,14 +20,28 @@
                 render();
             });
         });
-    }
+    };
+    const deleteTask = () => {
+        const deleteButtons = document.querySelectorAll(".js-delete");
+        deleteButtons.forEach((deleteButton, index) => {
+            deleteButton.addEventListener("click", () => {
+                tasks.splice(index, 1);
+                render();
+            });
+        });
+    };
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        newTaskAdd();
+        render();
+    };
     const render = () => {
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
             <li class="list__item">
-            <button class="checkedButton js-done">&check;</button>
-               <span class="list__item--content ${task.done ? "list__item--done" : "" }">${task.content}</span>
+         <button class="checkedButton js-done ">${task.done ? "&cross;" : "&check;" }</button>
+                    <span class="list__item--content ${task.done ? "list__item--done" : "" }">${task.content}</span>
             <button class="deleteButton js-delete">&cross;</button>
             </li> `
         }
@@ -42,22 +51,7 @@
     };
     const init = () => {
         const formTask = document.querySelector(".js-formTask");
-        formTask.addEventListener("submit", (event) => {
-            event.preventDefault();
-            const newTask = document.querySelector(".js-newTask").value.trim();
-            if (newTask === "") {
-                return;
-            }
-            console.log(newTask);
-            tasks.push({
-                content: newTask,
-            });
-            newTask.value = "";
-            render();
-
-        });
-
+        formTask.addEventListener("submit", onFormSubmit);
     };
     init();
-    render();
 }
