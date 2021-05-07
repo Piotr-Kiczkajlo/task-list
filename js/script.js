@@ -42,7 +42,7 @@
             <li class="list__item">
          <button class="checkedButton js-done ">${task.done ? "&check;"  : "" }</button>
                     <span class="list__item--content ${task.done ? "list__item--done" : "" }">${task.content}</span>
-            <button class="deleteButton js-delete">&#128465;</button>
+            <button class="deleteButton js-delete">&cross;</button>
             </li> `
         }
         document.querySelector(".js-listTask").innerHTML = htmlString;
