@@ -16,18 +16,19 @@
     <title>Tasks List</title>
 </head>
 
-<body class="body">
+<body>
     <div class="container">
-        <h1 class="container__header">Lista zadań</h1>
+        <h1 class="container__mainHeader">Lista zadań</h1>
+
+        <div class="container__formHeader">Dodaj nowe zadanie</div>
+        <form class="container__form js-formTask">
+            <input class="container__inputField js-inputText">
+            <button class="container__submitButton" type="submit">Dodaj zadanie</button>
+        </form>
+        <div class="container__listHeader">Lista zadań</div>
+        <ul class="container__list js-listTask">
+        </ul>
     </div>
-    <div class="container container--newTaskText">Dodaj nowe zadanie</div>
-    <form class="container container--addTask js-formTask">
-        <input class="container__input js-newTask" type="text">
-        <button class="container__button" type="submit">Dodaj zadanie</button>
-    </form>
-    <div class="container container--listHeader">Lista zadań</div>
-    <ul class="container container__list js-listTask">
-    </ul>
 </body>
 
 </html>

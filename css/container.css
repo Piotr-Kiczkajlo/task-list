@@ -6,19 +6,19 @@
       margin-top: 2px;
   }
   
-  .container__header {
+  .container__mainHeader {
       font-family: 'Francois One', sans-serif;
       font-weight: normal;
   }
   
-  .container--newTaskText {
+  .container__formHeader {
       background-color: white;
       font-family: 'Francois One', sans-serif;
-      padding: 10px;
+      padding: 10px 10px 0px 10px;
       font-size: 20px;
   }
   
-  .container--addTask {
+  .container__form {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -26,7 +26,7 @@
       padding-top: 10px;
   }
   
-  .container__input {
+  .container__inputField {
       display: flex;
       flex-basis: 70%;
       flex-shrink: 1;
@@ -35,7 +35,7 @@
       margin: 0px 10px 10px 10px;
   }
   
-  .container__button {
+  .container__submitButton {
       display: flex;
       flex-basis: auto;
       flex-grow: 1;
@@ -48,11 +48,11 @@
       margin: auto 10px 10px 10px
   }
   
-  .container__button:hover {
+  .container__submitButton:hover {
       background-color: rgb(4, 173, 173);
   }
   
-  .container--listHeader {
+  .container__listHeader {
       background-color: white;
       font-family: 'Francois One', sans-serif;
       padding: 10px;
@@ -66,19 +66,21 @@
       background-color: white;
       list-style-type: none;
       padding: 10px;
+      margin: 2px auto;
   }
   
   .list__item {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 2px;
+      border-bottom: 1.5px solid rgb(236, 236, 236);
+      padding: 5px 0px 5px 0px;
   }
   
   .list__item--content {
       justify-items: flex-start;
       flex-wrap: wrap;
       flex-grow: 1;
-      margin-left: 15px;
+      margin: auto 15px;
   }
   
   .list__item--done {
@@ -86,6 +88,9 @@
   }
   
   .checkedButton {
+      display: flex;
+      justify-content: center;
+      color: white;
       width: 20px;
       background-color: green;
       border: none;
@@ -96,9 +101,13 @@
   }
   
   .deleteButton {
+      display: flex;
+      justify-content: center;
+      color: white;
       width: 20px;
       background-color: red;
       border: none;
+      font-family: 'Francois One', sans-serif;
   }
   
   .deleteButton:hover {

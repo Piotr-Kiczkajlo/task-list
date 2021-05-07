@@ -1,15 +1,15 @@
 {
     const tasks = [];
     const newTaskAdd = () => {
-        const newTask = document.querySelector(".js-newTask");
+        const newTask = document.querySelector(".js-inputText");
         const newTaskText = newTask.value.trim();
         if (newTaskText === "") {
+            newTask.focus();
             return;
         }
         tasks.push({
             content: newTaskText,
         });
-        console.log(newTaskText);
         newTask.value = "";
     };
     const toggleChecked = () => {
@@ -40,9 +40,9 @@
         for (const task of tasks) {
             htmlString += `
             <li class="list__item">
-         <button class="checkedButton js-done ">${task.done ? "&cross;" : "&check;" }</button>
+         <button class="checkedButton js-done ">${task.done ? "&check;"  : "" }</button>
                     <span class="list__item--content ${task.done ? "list__item--done" : "" }">${task.content}</span>
-            <button class="deleteButton js-delete">&cross;</button>
+            <button class="deleteButton js-delete">&#128465;</button>
             </li> `
         }
         document.querySelector(".js-listTask").innerHTML = htmlString;

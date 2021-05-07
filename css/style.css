@@ -8,7 +8,7 @@ html {
     box-sizing: inherit;
 }
 
-.body {
+body {
     background-color: rgb(236, 236, 236);
     margin: 10px;
 }
