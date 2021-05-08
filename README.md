@@ -6,5 +6,7 @@
 - CSS
 - JavaScript
 - BEM
+- Flex
+
 ## **Description**
 This app will help you plan the order of things to do in the future. Add to-do items,mark already done, or delete an action you've already done.

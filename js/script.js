@@ -13,7 +13,7 @@
         newTask.value = "";
     };
     const toggleChecked = () => {
-        const checkButtons = document.querySelectorAll(".js-done");
+        const checkButtons = document.querySelectorAll(".js-check");
         checkButtons.forEach((checkButton, index) => {
             checkButton.addEventListener("click", () => {
                 tasks[index].done = !tasks[index].done;
@@ -40,9 +40,9 @@
         for (const task of tasks) {
             htmlString += `
             <li class="list__item">
-         <button class="checkedButton js-done ">${task.done ? "&check;"  : "" }</button>
-                    <span class="list__item--content ${task.done ? "list__item--done" : "" }">${task.content}</span>
-            <button class="deleteButton js-delete">&cross;</button>
+            <button class="list__Button list__Button--check  js-check">${task.done ? "&check;"  : "" }</button>
+                <span class="list__item--content ${task.done ? "list__item--done" : "" }">${task.content}</span>
+            <button class="list__Button list__Button--delete js-delete">&#128465;</button>
             </li> `
         }
         document.querySelector(".js-listTask").innerHTML = htmlString;
