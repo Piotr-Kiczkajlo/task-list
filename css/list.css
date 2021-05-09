@@ -3,39 +3,42 @@
     border-bottom: 1.5px solid rgb(236, 236, 236);
     padding: 5px 0px 5px 0px;
     overflow-wrap: anywhere;
+    align-items: center;
 }
 
 .list__item--content {
     flex-grow: 1;
     margin: auto 15px;
+    color: black;
 }
 
 .list__item--done {
     text-decoration: line-through;
 }
 
-.list__Button {
+.list__button {
     display: flex;
     justify-content: center;
     color: white;
-    min-width: 20px;
-    max-width: 20px;
-    max-height: 20px;
+    min-width: 25px;
+    max-width: 25px;
+    height: 25px;
+    align-items: center;
     border: none;
 }
 
-.list__Button--check:hover {
+.list__button--check:hover {
     background-color: rgb(52, 167, 17);
 }
 
-.list__Button--check {
+.list__button--check {
     background-color: green;
 }
 
-.list__Button--delete {
+.list__button--delete {
     background-color: red;
 }
 
-.list__Button--delete:hover {
+.list__button--delete:hover {
     background-color: rgb(255, 98, 98);
 }

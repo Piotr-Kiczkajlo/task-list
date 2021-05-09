@@ -12,7 +12,7 @@
         });
         newTask.value = "";
     };
-    const toggleChecked = () => {
+    const addCheckedButton = () => {
         const checkButtons = document.querySelectorAll(".js-check");
         checkButtons.forEach((checkButton, index) => {
             checkButton.addEventListener("click", () => {
@@ -21,7 +21,7 @@
             });
         });
     };
-    const deleteTask = () => {
+    const addDeleteButton = () => {
         const deleteButtons = document.querySelectorAll(".js-delete");
         deleteButtons.forEach((deleteButton, index) => {
             deleteButton.addEventListener("click", () => {
@@ -40,14 +40,14 @@
         for (const task of tasks) {
             htmlString += `
             <li class="list__item">
-            <button class="list__Button list__Button--check  js-check">${task.done ? "&check;"  : "" }</button>
+            <button class="list__button list__button--check  js-check">${task.done ? "&check;"  : "" }</button>
                 <span class="list__item--content ${task.done ? "list__item--done" : "" }">${task.content}</span>
-            <button class="list__Button list__Button--delete js-delete">&#128465;</button>
+            <button class="list__button list__button--delete js-delete">&#128465;</button>
             </li> `
         }
         document.querySelector(".js-listTask").innerHTML = htmlString;
-        toggleChecked();
-        deleteTask();
+        addCheckedButton();
+        addDeleteButton();
     };
     const init = () => {
         const formTask = document.querySelector(".js-formTask");
