@@ -1,13 +1,13 @@
 .list__item {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     border-bottom: 1.5px solid rgb(236, 236, 236);
     padding: 5px 0px 5px 0px;
-    overflow-wrap: anywhere;
+    word-break: break-word;
     align-items: center;
 }
 
 .list__item--content {
-    flex-grow: 1;
     margin: auto 15px;
     color: black;
 }
@@ -16,15 +16,20 @@
     text-decoration: line-through;
 }
 
+.list__item--hide {
+    display: none;
+}
+
 .list__button {
-    display: flex;
-    justify-content: center;
+    display: grid;
     color: white;
     min-width: 25px;
     max-width: 25px;
     height: 25px;
+    justify-items: center;
     align-items: center;
     border: none;
+    transition: .5s;
 }
 
 .list__button--check:hover {
