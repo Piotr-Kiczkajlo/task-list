@@ -9,6 +9,10 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/container.css" rel="stylesheet">
     <link href="css/list.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/button.css" rel="stylesheet">
     <link href="img/logo.png" rel="icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
@@ -20,19 +24,19 @@
 
 <body>
     <div class="container">
-        <h1 class="container__mainHeader">Lista zadań</h1>
+        <h1 class="mainHeader">Lista zadań</h1>
         <section>
-            <div class="container__header">Dodaj nowe zadanie</div>
-            <form class="container__section js-formTask">
-                <input class="container__inputField js-inputText" placeholder="Co jest do zrobienia ?">
-                <button class="container__submitButton" type="submit">Dodaj zadanie</button>
+            <div class="header">Dodaj nowe zadanie</div>
+            <form class="form js-formTask">
+                <input class="form__inputField js-inputText" placeholder="Co jest do zrobienia ?">
+                <button class="form__submitButton" type="submit">Dodaj zadanie</button>
             </form>
         </section>
         <section class="section">
-            <div class="section container__header">Lista zadań</div>
-            <div class="section container__header--buttons js-headerButtons"></div>
+            <div class="section header">Lista zadań</div>
+            <div class="section header--buttons js-headerButtons"></div>
         </section>
-        <ul class="container__section--list js-listTask">
+        <ul class="list js-listTask">
         </ul>
 
     </div>

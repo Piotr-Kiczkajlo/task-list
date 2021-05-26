@@ -1,0 +1,10 @@
+.section {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+}
+
+@media(max-width:600px) {
+    .section {
+        grid-template-columns: 1fr;
+    }
+}

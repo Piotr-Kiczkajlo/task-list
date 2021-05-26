@@ -90,7 +90,7 @@
         let manageTasksButton = "";
         if (tasks.length > 0) {
             manageTasksButton += `
-            <button class="manageTasksButton js-hideTasks"> ${hideDoneTasks  ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
+            <button class="manageTasksButton js-hideTasks"> ${tasks.some(({done}) => done) && hideDoneTasks  ? "Pokaż ukończone" : "Ukryj ukończone"}</button>
             <button class="manageTasksButton js-finishTasks" ${tasks.every(({done}) => done) ? "disabled" : ""}>Ukończ wszystkie</button>    
             `
         };

@@ -1,3 +1,9 @@
+.list {
+    background-color: white;
+    padding: 18px 10px;
+    margin-top: 2px;
+}
+
 .list__item {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -18,32 +24,4 @@
 
 .list__item--hide {
     display: none;
-}
-
-.list__button {
-    display: grid;
-    color: white;
-    min-width: 25px;
-    max-width: 25px;
-    height: 25px;
-    justify-items: center;
-    align-items: center;
-    border: none;
-    transition: .5s;
-}
-
-.list__button--check:hover {
-    background-color: rgb(52, 167, 17);
-}
-
-.list__button--check {
-    background-color: green;
-}
-
-.list__button--delete {
-    background-color: red;
-}
-
-.list__button--delete:hover {
-    background-color: rgb(255, 98, 98);
 }
